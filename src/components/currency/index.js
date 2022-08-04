@@ -12,6 +12,7 @@ function Currency() {
 
     const [rates, setRates] = useState([]);
 
+
     useEffect(() => {
         fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
 
@@ -25,6 +26,7 @@ function Currency() {
         for (let i = 0; i< rates.length; i++) {
             objRate[rates[i].cc] = rates[i].rate;
         }
+
     
 
     function format(number) {
